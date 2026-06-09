@@ -2,7 +2,7 @@ version: "3"
 
 services:
   yak-headless:
-    image: yak-headless:latest
+    image: ghcr.io/fovepig/yak-headless:latest
     restart: unless-stopped
     container_name: yak-headless
     environment:
