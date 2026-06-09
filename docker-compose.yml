@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  yak-headless:
+    image: yak-headless:latest
+    restart: unless-stopped
+    container_name: yak-headless
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./yak-data:/data/yakit-projects
+    ports:
+      - "8087:8087"
+    # 如需密码认证，取消下面这行注释并修改密码:
+    # command: grpc --host 0.0.0.0 --port 8087 --secret 你的密码
